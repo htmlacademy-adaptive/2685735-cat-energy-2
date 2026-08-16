@@ -1,0 +1,28 @@
+.input {
+  padding: 0;
+  width: 100%;
+  font-family: $font-secondary;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: inherit;
+  text-transform: uppercase;
+  color: $color-text-primary;
+  background-color: $color-white;
+  border: $border-input;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border: $border-optional;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $color-text-primary;
+    box-shadow: inset 0 0 0 1px $color-text-primary;
+  }
+
+  &--error {
+    border-color: $color-error;
+    box-shadow: inset 0 0 0 1px $color-error;
+  }
+}

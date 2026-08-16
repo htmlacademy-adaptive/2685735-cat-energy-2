@@ -1,0 +1,125 @@
+.footer {
+  padding-block: 38px 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 55px;
+    background-color: $color-background;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 66px;
+  }
+}
+
+.footer__container {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer__logo-wrapper {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-block-end: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-block-end: 0;
+    margin-inline-end: auto;
+  }
+
+  &:hover .footer__logo-image,
+  &:focus-visible .footer__logo-image {
+    background-color: #3e3e3e;
+  }
+
+  &:active .footer__logo-image {
+    background-color: #6b6b6b;
+  }
+}
+
+.footer__logo-image {
+  display: block;
+  width: 128px;
+  height: 24px;
+  background-color: $color-text-accent;
+  mask-image: url("../../images/logo-text.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  margin-bottom: 20px;
+  padding-block: 20px 15px;
+  border-top: $border-main;
+  border-bottom: $border-main;
+
+  @media (min-width: $tablet-width) {
+    margin-block-end: 0;
+    margin-inline-start: 35px;
+    padding-block: 0;
+    border: none;
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: inherit;
+  font-size: 16px;
+  line-height: 1.25;
+  transition: all 0.2s ease;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    background-color: $color-background-accent;
+    mask-image: url("../../icons/stack.svg#html-academy-logo");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transition: all 0.2s ease;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $color-green-basic;
+  }
+
+  &:active::after {
+    background-color: $color-green-basic;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    height: 37px;
+    margin-inline-start: auto;
+  }
+}
+
+.footer__copyright-text {
+  color: inherit;
+}

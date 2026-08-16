@@ -1,0 +1,15 @@
+.catalog .contacts {
+  background-color: $color-background;
+}
+
+.catalog .header {
+  position: relative;
+}
+
+.catalog .main-nav__link {
+  color: $color-text-accent;
+
+  &--current {
+    border-bottom-color: $color-green-basic;
+  }
+}

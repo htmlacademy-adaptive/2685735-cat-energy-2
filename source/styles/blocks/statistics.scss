@@ -1,0 +1,115 @@
+.statistics__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 32px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-block-end: 0;
+    column-gap: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-block-end: 55px;
+    column-gap: 42px;
+  }
+}
+
+.statistics__item {
+  position: relative;
+  width: 124px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  border: $border-optional;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 162px;
+    padding: 15px 15px 20px;
+  }
+}
+
+.statistics__term {
+  position: absolute;
+  bottom: -22px;
+  width: 80px;
+  padding: 5px;
+  line-height: 1;
+  text-align: center;
+  background-color: $color-background-alternate;
+
+  @media (min-width: $tablet-width) {
+    bottom: -10px;
+    width: max-content;
+    max-width: 90%;
+    padding-inline: 9px;
+    background-color: $color-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-background;
+  }
+}
+
+.statistics__term-text {
+  font-size: 12px;
+  line-height: 1;
+  text-transform: lowercase;
+  text-align: center;
+  color: $color-text-primary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+}
+
+.statistics__definition {
+  margin: 0;
+  font-family: $font-secondary;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
+
+.statistics-charges {
+  margin-block: 0;
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    display: inline-flex;
+    flex-wrap: wrap;
+    place-content: flex-end flex-end;
+    align-content: flex-start;
+    max-width: 180px;
+    margin-block: 7px;
+    margin-inline-start: auto;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin-block: 0;
+    margin-inline-start: 0;
+    column-gap: 65px;
+  }
+}
+
+.statistics__price {
+  flex-shrink: 0;
+}

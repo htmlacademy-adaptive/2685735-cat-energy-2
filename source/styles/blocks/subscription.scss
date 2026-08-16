@@ -1,0 +1,122 @@
+.subscription {
+  padding-block: 20px 40px;
+  font-family: $font-secondary;
+  line-height: 1.5;
+  overflow-x: hidden;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 40px 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 48px 104px;
+  }
+}
+
+.subscription__title {
+  position: relative;
+  width: fit-content;
+  margin-block-end: 32px;
+  font-size: 24px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: $color-green-basic;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    right: calc(100% + 20px);
+
+    @media (min-width: $tablet-width) {
+      right: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: calc(100% + 40px);
+    }
+  }
+
+  &::after {
+    left: calc(100% + 40px);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-block-end: 66px;
+    padding-inline-start: 40px;
+    font-size: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-block-end: 72px;
+    padding-inline-start: 0;
+    font-size: 40px;
+  }
+}
+
+.subscription__description {
+  max-width: 635px;
+  margin-block: 0 24px;
+  margin-inline: auto;
+  font-size: 16px;
+  text-align: center;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+    margin-block-end: 22px;
+  }
+}
+
+.subscription__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-inline: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 752px;
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+}
+
+.subscription__label {
+  flex-basis: 100%;
+}
+
+.subscription__email-field {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+}
+
+.subscription__button {
+  padding-block: 15px;
+  padding-inline: 25px;
+  font-size: 20px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 256px;
+    flex-shrink: 0;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}

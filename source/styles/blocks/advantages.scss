@@ -1,0 +1,127 @@
+.advantages {
+  padding-block: 13px 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 20px 6px;
+    border-bottom: $border-section;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 35px 25px;
+    border-bottom: none;
+  }
+}
+
+.advantages__title {
+  margin-bottom: 42px;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  counter-reset: advantage;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    gap: 40px 80px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 20px;
+  counter-increment: advantage;
+
+  &::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 60px;
+    aspect-ratio: 1;
+    background-color: $color-green-basic;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      margin-block-end: 31px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: counter(advantage);
+      position: absolute;
+      top: -40px;
+      left: 35%;
+      z-index: -1;
+      font-family: $font-secondary;
+      font-size: 280px;
+      line-height: 1;
+      color: $color-background;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 47%;
+      right: 0;
+    }
+  }
+
+  &--leaf {
+    &::before {
+      background-image: url("../../icons/stack.svg#icon-leaf");
+      background-size: 25px 28px;
+    }
+  }
+
+  &--nutrition {
+    &::before {
+      background-image: url("../../icons/stack.svg#icon-nutrition");
+      background-size: 26px 28px;
+    }
+  }
+
+  &--eat {
+    &::before {
+      background-image: url("../../icons/stack.svg#icon-eat");
+      background-size: 25px 30px;
+    }
+  }
+
+  &--clock {
+    &::before {
+      background-image: url("../../icons/stack.svg#icon-clock");
+      background-size: 26px 31px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: block;
+    min-height: 280px;
+  }
+}
+
+.advantages__description {
+  margin: 0;
+  color: $color-text-primary;
+
+  @media (min-width: $tablet-width) {
+    max-width: 250px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
